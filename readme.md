@@ -1,15 +1,28 @@
 oxfordKneeValidation
 ======================
+<img src="https://img.shields.io/badge/Study%20Status-Started-blue.svg" alt="Study Status: Started">
 
-  Introduction
+- Analytics use case(s): **Patient-Level Prediction**
+- Study type: **Clinical Application**
+- Tags: **Study-a-thon, COVID-19**
+- Study lead: **Jenna Reps, Ross Williams**
+- Study lead forums tag: **[jreps](https://forums.ohdsi.org/u/jreps), [RossW](https://forums.ohdsi.org/u/RossW),**
+- Study start date: **Dec 16, 2018**
+- Study end date: **-**
+- Protocol: ****
+- Publications: **-**
+- Results explorer: **-**
+
+The objective of this study is to develop and validate various patient-level prediction models for total knee replacement patients. 
+
+
+Introduction
 ============
-  Add the background for this study here
-
+This repo contains the simple models needed for validation of the Oxford Ehden study-athon simple models to predict mortality following a total knee replacement
 
 Features
 ========
-  - what does the study do as the main thing
-  - what else does it do?
+  - Validates the full models developed in Thin and OptumDod as well as a user designed simple and a data driven simple developed in optumDod
 
 Technology
 ==========
@@ -34,50 +47,51 @@ Getting Started
 
 library(oxfordKneeValidation)
 
-# add details of your database setting:
-databaseName <- 'add a shareable name for the database you are currently validating on'
+# Specify where the temporary files (used by the ff package) will be created:
+options(fftempdir = "T:/temp")
 
-# add the cdm database schema with the data
-cdmDatabaseSchema <- 'your cdm database schema for the validation'
+# Details for connecting to the server:
+dbms <- ""
+user <- ""
+pw <- ""
+server <- ""
+port <-
 
-# add the work database schema this requires read/write privileges 
-cohortDatabaseSchema <- 'your work database schema'
-
-# if using oracle please set the location of your temp schema
-oracleTempSchema <- NULL
-
-# the name of the table that will be created in cohortDatabaseSchema to hold the cohorts
-cohortTable <- 'oxfordKneeValidationCohortTable'
-
-# the location to save the prediction models results to:
-outputFolder <- getwd()
-
-# add connection details:
-options(fftempdir = 'T:/fftemp')
-dbms <- "pdw"
-user <- NULL
-pw <- NULL
-server <- Sys.getenv('server')
-port <- Sys.getenv('port')
 connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = dbms,
                                                                 server = server,
                                                                 user = user,
                                                                 password = pw,
                                                                 port = port)
 
+
+
+# Add the database containing the OMOP CDM data
+cdmDatabaseSchema <- ''
+# Add a sharebale name for the database containing the OMOP CDM data
+cdmDatabaseName <- ''
+# Add a database with read/write access as this is where the cohorts will be generated
+cohortDatabaseSchema <- ''
+
+oracleTempSchema <- ""
+
+outputFolder <- ""
+cohortTable <- ''
+
+
 # Now run the study
 oxfordKneeValidation::execute(connectionDetails = connectionDetails,
-                 databaseName = databaseName,
-                 cdmDatabaseSchema = cdmDatabaseSchema,
-                 cohortDatabaseSchema = cohortDatabaseSchema,
-                 oracleTempSchema = oracleTempSchema,
-                 cohortTable = cohortTable,
-                 outputFolder = outputFolder,
-                 createCohorts = T,
-                 runValidation = T,
-                 packageResults = T,
-                 minCellCount = 5,
-                 sampleSize = NULL)
+                              databaseName = cdmDatabaseName,
+                              cdmDatabaseSchema = cdmDatabaseSchema,
+                              cohortDatabaseSchema = cohortDatabaseSchema,
+                              oracleTempSchema = oracleTempSchema,
+                              cohortTable = cohortTable,
+                              outputFolder = outputFolder,
+                              createCohorts = T,
+                              runValidation = T,
+                              runSimple = T,
+                              packageResults = F,
+                              minCellCount = 5,
+                              sampleSize = NULL)
                  
 # add code to submit results to study admin here
 
