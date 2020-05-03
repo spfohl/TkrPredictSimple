@@ -1,0 +1,16 @@
+covariateName,covariateId,points
+Intercept, 0, -7.1810464
+age group: 55-59,11003,-0.200032809
+age group: 60-64,12003,-0.310105229
+age group: 75-79,15003,0.332116119
+age group: 80-84,16003,0.996925948
+age group: 85-89,17003,1.73409192
+gender = MALE,8507001,0.266962638
+[rw - tkr] copd  days before: -9999 days after: 0,14284456,0.666340259
+[rw - tkr] T2DM  days before: -9999 days after: 0,14287456,0.187448986
+[rw - tkr] opiods  days before: -9999 days after: 0,14288456,-0.112083402
+[rw - tkr] psycholeptics  days before: -9999 days after: 0,14289456,0.119820496
+[rw - TKR] Kidney disease  days before: -9999 days after: 0,14290456,0.459821698
+[rw - tkr] Persons with a malignant neoplasm other than non-melanoma skin cancer  days before: -9999 days after: 0,14291456,-0.135173888
+[rw - tkr] Heart Failure or AFIb  days before: -9999 days after: 0,14506456,1.112218581
+[rw - tkr] Gout  days before: -9999 days after: 0,14509456,0.262875225

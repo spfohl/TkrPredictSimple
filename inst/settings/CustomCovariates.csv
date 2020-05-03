@@ -1,0 +1,11 @@
+"cohortId","atlasId","cohortName","startDay","endDay","count","ageInteraction"
+14284,14284,rw__tkr_copd,-9999,-1,FALSE,FALSE
+14506,14506,rw__tkr_Heart_Failure_or_AFIb,-9999,-1,FALSE,FALSE
+14507,14507,rw__tkr_OA,-9999,-1,FALSE,FALSE
+14509,14509,rw__tkr_Gout,-9999,-1,FALSE,FALSE
+14283,14283,rw__tkr_Hypertension,-9999,-1,FALSE,FALSE
+14291,14291,rw__tkr_Persons_with_a_malignant_neoplasm_other_than_nonmelanoma_skin_cancer,-9999,-1,FALSE,FALSE
+14288,14288,rw__tkr_opiods,-9999,-1,FALSE,FALSE
+14290,14290,rw__TKR_Kidney_disease,-9999,-1,FALSE,FALSE
+14289,14289,rw__tkr_psycholeptics,-9999,-1,FALSE,FALSE
+14287,14287,rw__tkr_T2DM,-9999,-1,FALSE,FALSE

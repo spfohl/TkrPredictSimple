@@ -1,0 +1,31 @@
+DBMS:
+pdw
+
+Error:
+cannot change working directory
+
+SQL:
+SELECT *
+FROM (
+SELECT row_id, covariate_id, covariate_value FROM #cov_1 UNION ALL
+SELECT row_id, covariate_id, covariate_value FROM #cov_2
+) all_covariates;
+
+R version:
+R version 3.5.3 (2019-03-11)
+
+Platform:
+x86_64-w64-mingw32
+
+Attached base packages:
+- stats
+- graphics
+- grDevices
+- utils
+- datasets
+- methods
+- base
+
+Other attached packages:
+- oxfordKneeValidation (0.0.2)
+- DatabaseConnector (2.4.2)
