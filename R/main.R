@@ -130,7 +130,7 @@ execute <- function(connectionDetails,
               dir.create(file.path(outputFolder,databaseName,paste0('Analysis_',sa$analysisId)), recursive = T)
             }
             ParallelLogger::logInfo("Saving results")
-            saveRDS(result, file.path(outputFolder,databaseName,paste0('Analysis_',sa$analysisId),'validationResults.rds'))
+            saveRDS(result, file.path(outputFolder,databaseName,paste0('Analysis_',sa$analysisId),'validationResult.rds'))
             ParallelLogger::logInfo(paste0("Results saved to:",file.path(outputFolder,databaseName,paste0('Analysis_',sa$analysisId),'validationResults.rds')))
           }
 
