@@ -43,7 +43,7 @@ Getting Started
   ```r
   # If not building locally uncomment and run:
 #install.packages("devtools")
-#devtools::install_github("OHDSI/StudyProtocolSandbox/oxfordKneeValidation")
+#devtools::install_github('ohdsi-studies/TkrPredictSimple')
 
 library(oxfordKneeValidation)
 
