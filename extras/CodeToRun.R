@@ -5,9 +5,9 @@ options(fftempdir = "T:/temp")
 
 # Details for connecting to the server:
 dbms <- ""
-user <- ""
-pw <- ""
-server <- ""
+user <- ''
+pw <- ''
+server <- ''
 port <-
 
 connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = dbms,
@@ -17,19 +17,18 @@ connectionDetails <- DatabaseConnector::createConnectionDetails(dbms = dbms,
                                                                 port = port)
 
 
-
 # Add the database containing the OMOP CDM data
 cdmDatabaseSchema <- ''
 # Add a sharebale name for the database containing the OMOP CDM data
 cdmDatabaseName <- ''
 # Add a database with read/write access as this is where the cohorts will be generated
-cohortDatabaseSchema <- ''
+cohortDatabaseSchema <- ""
 
-oracleTempSchema <- ""
+oracleTempSchema <- NULL
 
-outputFolder <- ""
-cohortTable <- ''
+outputFolder <- ''
 
+cohortTable <- 'oxfordKneeVelidationCohort'
 
 # Now run the study
 oxfordKneeValidation::execute(connectionDetails = connectionDetails,
@@ -42,7 +41,7 @@ oxfordKneeValidation::execute(connectionDetails = connectionDetails,
                               createCohorts = T,
                               runValidation = T,
                               runSimple = T,
-                              packageResults = F,
+                              packageResults = T,
                               minCellCount = 5,
                               sampleSize = NULL)
 
