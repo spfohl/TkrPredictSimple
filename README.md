@@ -1,4 +1,4 @@
-Predicting short term mortality follwoing total knee replacement
+Predicting 90-day mortality following total knee replacement
 ======================
 <img src="https://img.shields.io/badge/Study%20Status-Started-blue.svg" alt="Study Status: Started">
 
