@@ -9,9 +9,9 @@ Predicting 90-day mortality following total knee replacement
 - Study lead forums tag: **[jreps](https://forums.ohdsi.org/u/jreps), [RossW](https://forums.ohdsi.org/u/RossW),**
 - Study start date: **Dec 16, 2018**
 - Study end date: **-**
-- Protocol: ****
+- Protocol: **[Link](https://github.com/OHDSI/StudyProtocols/blob/master/UkaTkaSafetyEffectiveness/documents/OHDSI%20Oxford%20PLE%20Protocol%2030dec2018.docx)**
 - Publications: **-**
-- Results explorer: **-**
+- Results explorer: [Link](https://data.ohdsi.org/TKROutcomesExplorer/)
 
 The objective of this study is to develop and validate various patient-level prediction models for total knee replacement patients. 
 
