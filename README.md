@@ -23,6 +23,12 @@ This repo contains the simple models needed for validation of the Oxford Ehden s
 Features
 ========
   - Validates the full models developed in Thin and OptumDod as well as a user designed simple and a data driven simple developed in optumDod
+  
+  - Included in the package are 4 models they are:
+    - Analysis_1: the full mdoel developed in optumDod
+    - Analysis_1001: the simple model using user defined inputs
+    - Analysis_1002: the simple model using data driven development methods (high penalisation)
+    - Analysis_2: the full model developed on THIN
 
 Technology
 ==========
