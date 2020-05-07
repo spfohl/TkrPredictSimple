@@ -1,0 +1,213 @@
+2020-05-06 12:06:58	[Main thread]	INFO	oxfordKneeValidation	execute	Creating Cohorts
+2020-05-06 12:07:02	[Main thread]	WARN	SqlRender	render	Parameter 'vocabulary_database_schema' not found in SQL
+2020-05-06 12:14:39	[Main thread]	INFO	oxfordKneeValidation	createCohorts	Counting cohorts
+2020-05-06 12:14:40	[Main thread]	INFO	oxfordKneeValidation	execute	Validating Models
+2020-05-06 12:14:40	[Main thread]	INFO	PatientLevelPrediction	evaluateMultiplePlp	Evaluating model in C:/Users/prijnbee/Documents/R/win-library/3.5/oxfordKneeValidation/plp_models/Analysis_1
+2020-05-06 12:14:40	[Main thread]	INFO	PatientLevelPrediction	evaluateMultiplePlp	plpResult found in C:/Users/prijnbee/Documents/R/win-library/3.5/oxfordKneeValidation/plp_models/Analysis_1
+2020-05-06 12:14:40	[Main thread]	WARN	PatientLevelPrediction	loadPlpModel	cannot open compressed file 'C:/Users/prijnbee/Documents/R/win-library/3.5/oxfordKneeValidation/plp_models/Analysis_1/plpResult/model/analysisId.rds', probable reason 'No such file or directory'
+2020-05-06 12:14:44	[Main thread]	TRACE	PatientLevelPrediction	similarPlpData	Loading model data extraction settings
+2020-05-06 12:14:44	[Main thread]	TRACE	PatientLevelPrediction	similarPlpData	Adding new settings if set...
+2020-05-06 12:26:27	[Main thread]	TRACE	PatientLevelPrediction	similarPlpData	Loading model population settings
+2020-05-06 12:26:27	[Main thread]	WARN	PatientLevelPrediction		addExposureDaysToStart is depreciated - please use startAnchor instead
+2020-05-06 12:26:27	[Main thread]	WARN	PatientLevelPrediction		addExposureDaysToEnd is depreciated - please use endAnchor instead
+2020-05-06 12:26:27	[Main thread]	DEBUG	PatientLevelPrediction		outcomeId: 8210
+2020-05-06 12:26:27	[Main thread]	DEBUG	PatientLevelPrediction		binary: TRUE
+2020-05-06 12:26:27	[Main thread]	DEBUG	PatientLevelPrediction		includeAllOutcomes: TRUE
+2020-05-06 12:26:27	[Main thread]	DEBUG	PatientLevelPrediction		firstExposureOnly: FALSE
+2020-05-06 12:26:27	[Main thread]	DEBUG	PatientLevelPrediction		washoutPeriod: 365
+2020-05-06 12:26:27	[Main thread]	DEBUG	PatientLevelPrediction		removeSubjectsWithPriorOutcome: FALSE
+2020-05-06 12:26:27	[Main thread]	DEBUG	PatientLevelPrediction		requireTimeAtRisk: FALSE
+2020-05-06 12:26:27	[Main thread]	DEBUG	PatientLevelPrediction		minTimeAtRisk: 0
+2020-05-06 12:26:27	[Main thread]	DEBUG	PatientLevelPrediction		riskWindowStart: 0
+2020-05-06 12:26:27	[Main thread]	DEBUG	PatientLevelPrediction		startAnchor: FALSE
+2020-05-06 12:26:27	[Main thread]	DEBUG	PatientLevelPrediction		riskWindowEnd: 90
+2020-05-06 12:26:27	[Main thread]	DEBUG	PatientLevelPrediction		endAnchor: FALSE
+2020-05-06 12:26:29	[Main thread]	TRACE	PatientLevelPrediction		Requiring 365 days of observation prior index date
+2020-05-06 12:26:29	[Main thread]	TRACE	PatientLevelPrediction		Removing subjects with no time at risk (if any)
+2020-05-06 12:26:30	[Main thread]	INFO	PatientLevelPrediction		Outcome is 0 or 1
+2020-05-06 12:26:35	[Main thread]	TRACE	PatientLevelPrediction	similarPlpData	Returning population and plpData for new data using model settings
+2020-05-06 12:26:35	[Main thread]	INFO	PatientLevelPrediction	applyModel	Starting Prediction  2020-05-06 12:26:35 for  152666  people
+2020-05-06 12:26:49	[Main thread]	TRACE	PatientLevelPrediction	predict.plp	predict.plp - predictingProbabilities start
+2020-05-06 12:26:49	[Main thread]	TRACE	PatientLevelPrediction	predictProbabilities	predictProbabilities - predictFfdf start
+2020-05-06 12:26:55	[Main thread]	TRACE	PatientLevelPrediction	predictProbabilities	predictProbabilities - predictFfdf end
+2020-05-06 12:26:55	[Main thread]	INFO	PatientLevelPrediction	predictProbabilities	Prediction took 6.54 secs
+2020-05-06 12:26:55	[Main thread]	TRACE	PatientLevelPrediction	predict.plp	predict.plp - predictingProbabilities end
+2020-05-06 12:26:55	[Main thread]	INFO	PatientLevelPrediction	applyModel	Prediction completed at  2020-05-06 12:26:55  taking  -20.3771760463715
+2020-05-06 12:26:55	[Main thread]	INFO	PatientLevelPrediction	applyModel	Starting evaulation at  2020-05-06 12:26:55
+2020-05-06 12:26:55	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating AUC
+2020-05-06 12:26:59	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	AUC:                82.05
+2020-05-06 12:26:59	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	95% lower AUC:      79.76
+2020-05-06 12:26:59	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	95% upper AUC:      84.33
+2020-05-06 12:26:59	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating AUPRC
+2020-05-06 12:27:02	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	AUPRC:              2.41
+2020-05-06 12:27:02	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating Brier Score
+2020-05-06 12:27:02	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	Brier:              0.00
+2020-05-06 12:27:02	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calulating Threshold summary Started @ 2020-05-06 12:27:02
+2020-05-06 12:27:05	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Completed @ 2020-05-06 12:27:05
+2020-05-06 12:27:05	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calulating Demographic Based Evaluation Started @ 2020-05-06 12:27:05
+2020-05-06 12:27:10	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Completed @ 2020-05-06 12:27:10
+2020-05-06 12:27:10	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating Calibration Line
+2020-05-06 12:27:12	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	Calibration gradient: 1.47 intercept:         -0.00
+2020-05-06 12:27:12	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating Calibration Summary Started @ 2020-05-06 12:27:12
+2020-05-06 12:27:18	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Completed @ 2020-05-06 12:27:18
+2020-05-06 12:27:18	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating Quantiles Started @ 2020-05-06 12:27:18
+2020-05-06 12:27:21	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Completed @ 2020-05-06 12:27:21
+2020-05-06 12:27:21	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	Average Precision:  0.03
+2020-05-06 12:27:21	[Main thread]	INFO	PatientLevelPrediction	applyModel	Evaluation completed at  2020-05-06 12:27:21  taking  -45.9166061878204
+2020-05-06 12:27:21	[Main thread]	INFO	PatientLevelPrediction	applyModel	Starting covariate summary at  2020-05-06 12:27:21
+2020-05-06 12:27:35	[Main thread]	INFO	PatientLevelPrediction	applyModel	Covariate summary completed at  2020-05-06 12:27:35  taking  -13.9307208061218
+2020-05-06 12:27:38	[Main thread]	INFO	PatientLevelPrediction	evaluateMultiplePlp	Evaluation result save in ./test/results/finaltest/optumDod/Analysis_1/validationResult.rds
+2020-05-06 12:27:42	[Main thread]	INFO	PatientLevelPrediction	evaluateMultiplePlp	Evaluating model in C:/Users/prijnbee/Documents/R/win-library/3.5/oxfordKneeValidation/plp_models/Analysis_1002
+2020-05-06 12:27:44	[Main thread]	INFO	PatientLevelPrediction	evaluateMultiplePlp	plpResult found in C:/Users/prijnbee/Documents/R/win-library/3.5/oxfordKneeValidation/plp_models/Analysis_1002
+2020-05-06 12:27:52	[Main thread]	TRACE	PatientLevelPrediction	similarPlpData	Loading model data extraction settings
+2020-05-06 12:27:52	[Main thread]	TRACE	PatientLevelPrediction	similarPlpData	Adding new settings if set...
+2020-05-06 12:30:40	[Main thread]	TRACE	PatientLevelPrediction	similarPlpData	Loading model population settings
+2020-05-06 12:30:40	[Main thread]	WARN	PatientLevelPrediction		addExposureDaysToStart is depreciated - please use startAnchor instead
+2020-05-06 12:30:40	[Main thread]	WARN	PatientLevelPrediction		addExposureDaysToEnd is depreciated - please use endAnchor instead
+2020-05-06 12:30:40	[Main thread]	DEBUG	PatientLevelPrediction		outcomeId: 8210
+2020-05-06 12:30:40	[Main thread]	DEBUG	PatientLevelPrediction		binary: TRUE
+2020-05-06 12:30:40	[Main thread]	DEBUG	PatientLevelPrediction		includeAllOutcomes: TRUE
+2020-05-06 12:30:40	[Main thread]	DEBUG	PatientLevelPrediction		firstExposureOnly: FALSE
+2020-05-06 12:30:40	[Main thread]	DEBUG	PatientLevelPrediction		washoutPeriod: 365
+2020-05-06 12:30:40	[Main thread]	DEBUG	PatientLevelPrediction		removeSubjectsWithPriorOutcome: FALSE
+2020-05-06 12:30:40	[Main thread]	DEBUG	PatientLevelPrediction		requireTimeAtRisk: TRUE
+2020-05-06 12:30:40	[Main thread]	DEBUG	PatientLevelPrediction		minTimeAtRisk: 0
+2020-05-06 12:30:40	[Main thread]	DEBUG	PatientLevelPrediction		riskWindowStart: 1
+2020-05-06 12:30:40	[Main thread]	DEBUG	PatientLevelPrediction		startAnchor: FALSE
+2020-05-06 12:30:40	[Main thread]	DEBUG	PatientLevelPrediction		riskWindowEnd: 90
+2020-05-06 12:30:40	[Main thread]	DEBUG	PatientLevelPrediction		endAnchor: FALSE
+2020-05-06 12:30:40	[Main thread]	TRACE	PatientLevelPrediction		Requiring 365 days of observation prior index date
+2020-05-06 12:30:43	[Main thread]	TRACE	PatientLevelPrediction		Removing non outcome subjects with insufficient time at risk (if any)
+2020-05-06 12:30:43	[Main thread]	INFO	PatientLevelPrediction		Outcome is 0 or 1
+2020-05-06 12:30:46	[Main thread]	TRACE	PatientLevelPrediction	similarPlpData	Returning population and plpData for new data using model settings
+2020-05-06 12:30:46	[Main thread]	INFO	PatientLevelPrediction	applyModel	Starting Prediction  2020-05-06 12:30:46 for  152630  people
+2020-05-06 12:30:51	[Main thread]	TRACE	PatientLevelPrediction	predict.plp	predict.plp - predictingProbabilities start
+2020-05-06 12:30:51	[Main thread]	TRACE	PatientLevelPrediction	predictProbabilities	predictProbabilities - predictFfdf start
+2020-05-06 12:30:53	[Main thread]	TRACE	PatientLevelPrediction	predictProbabilities	predictProbabilities - predictFfdf end
+2020-05-06 12:30:54	[Main thread]	INFO	PatientLevelPrediction	predictProbabilities	Prediction took 2.51 secs
+2020-05-06 12:30:54	[Main thread]	TRACE	PatientLevelPrediction	predict.plp	predict.plp - predictingProbabilities end
+2020-05-06 12:30:54	[Main thread]	INFO	PatientLevelPrediction	applyModel	Prediction completed at  2020-05-06 12:30:54  taking  -7.1096670627594
+2020-05-06 12:30:54	[Main thread]	INFO	PatientLevelPrediction	applyModel	Starting evaulation at  2020-05-06 12:30:54
+2020-05-06 12:30:54	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating AUC
+2020-05-06 12:30:57	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	AUC:                80.85
+2020-05-06 12:30:57	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	95% lower AUC:      78.10
+2020-05-06 12:30:57	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	95% upper AUC:      83.59
+2020-05-06 12:30:57	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating AUPRC
+2020-05-06 12:30:57	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	AUPRC:              8.85
+2020-05-06 12:30:57	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating Brier Score
+2020-05-06 12:30:57	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	Brier:              0.00
+2020-05-06 12:30:57	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calulating Threshold summary Started @ 2020-05-06 12:30:57
+2020-05-06 12:31:01	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Completed @ 2020-05-06 12:31:01
+2020-05-06 12:31:01	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calulating Demographic Based Evaluation Started @ 2020-05-06 12:31:01
+2020-05-06 12:31:03	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Completed @ 2020-05-06 12:31:03
+2020-05-06 12:31:03	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating Calibration Line
+2020-05-06 12:31:05	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	Calibration gradient: 1.80 intercept:         -0.00
+2020-05-06 12:31:05	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating Calibration Summary Started @ 2020-05-06 12:31:05
+2020-05-06 12:31:11	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Completed @ 2020-05-06 12:31:11
+2020-05-06 12:31:11	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating Quantiles Started @ 2020-05-06 12:31:11
+2020-05-06 12:31:13	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Completed @ 2020-05-06 12:31:13
+2020-05-06 12:31:13	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	Average Precision:  0.09
+2020-05-06 12:31:13	[Main thread]	INFO	PatientLevelPrediction	applyModel	Evaluation completed at  2020-05-06 12:31:13  taking  -26.9096460342407
+2020-05-06 12:31:13	[Main thread]	INFO	PatientLevelPrediction	applyModel	Starting covariate summary at  2020-05-06 12:31:13
+2020-05-06 12:31:17	[Main thread]	INFO	PatientLevelPrediction	applyModel	Covariate summary completed at  2020-05-06 12:31:17  taking  -3.69782996177673
+2020-05-06 12:31:17	[Main thread]	INFO	PatientLevelPrediction	evaluateMultiplePlp	Evaluation result save in ./test/results/finaltest/optumDod/Analysis_1002/validationResult.rds
+2020-05-06 12:31:17	[Main thread]	INFO	PatientLevelPrediction	evaluateMultiplePlp	Evaluating model in C:/Users/prijnbee/Documents/R/win-library/3.5/oxfordKneeValidation/plp_models/Analysis_2
+2020-05-06 12:31:17	[Main thread]	INFO	PatientLevelPrediction	evaluateMultiplePlp	plpResult found in C:/Users/prijnbee/Documents/R/win-library/3.5/oxfordKneeValidation/plp_models/Analysis_2
+2020-05-06 12:31:17	[Main thread]	WARN	PatientLevelPrediction	loadPlpModel	cannot open compressed file 'C:/Users/prijnbee/Documents/R/win-library/3.5/oxfordKneeValidation/plp_models/Analysis_2/plpResult/model/analysisId.rds', probable reason 'No such file or directory'
+2020-05-06 12:31:20	[Main thread]	TRACE	PatientLevelPrediction	similarPlpData	Loading model data extraction settings
+2020-05-06 12:31:20	[Main thread]	TRACE	PatientLevelPrediction	similarPlpData	Adding new settings if set...
+2020-05-06 12:36:47	[Main thread]	TRACE	PatientLevelPrediction	similarPlpData	Loading model population settings
+2020-05-06 12:36:47	[Main thread]	WARN	PatientLevelPrediction		addExposureDaysToStart is depreciated - please use startAnchor instead
+2020-05-06 12:36:47	[Main thread]	WARN	PatientLevelPrediction		addExposureDaysToEnd is depreciated - please use endAnchor instead
+2020-05-06 12:36:47	[Main thread]	DEBUG	PatientLevelPrediction		outcomeId: 8210
+2020-05-06 12:36:47	[Main thread]	DEBUG	PatientLevelPrediction		binary: TRUE
+2020-05-06 12:36:47	[Main thread]	DEBUG	PatientLevelPrediction		includeAllOutcomes: TRUE
+2020-05-06 12:36:47	[Main thread]	DEBUG	PatientLevelPrediction		firstExposureOnly: FALSE
+2020-05-06 12:36:47	[Main thread]	DEBUG	PatientLevelPrediction		washoutPeriod: 365
+2020-05-06 12:36:47	[Main thread]	DEBUG	PatientLevelPrediction		removeSubjectsWithPriorOutcome: FALSE
+2020-05-06 12:36:47	[Main thread]	DEBUG	PatientLevelPrediction		requireTimeAtRisk: FALSE
+2020-05-06 12:36:47	[Main thread]	DEBUG	PatientLevelPrediction		minTimeAtRisk: 0
+2020-05-06 12:36:47	[Main thread]	DEBUG	PatientLevelPrediction		riskWindowStart: 0
+2020-05-06 12:36:47	[Main thread]	DEBUG	PatientLevelPrediction		startAnchor: FALSE
+2020-05-06 12:36:47	[Main thread]	DEBUG	PatientLevelPrediction		riskWindowEnd: 90
+2020-05-06 12:36:47	[Main thread]	DEBUG	PatientLevelPrediction		endAnchor: FALSE
+2020-05-06 12:36:47	[Main thread]	TRACE	PatientLevelPrediction		Requiring 365 days of observation prior index date
+2020-05-06 12:36:47	[Main thread]	TRACE	PatientLevelPrediction		Removing subjects with no time at risk (if any)
+2020-05-06 12:36:50	[Main thread]	INFO	PatientLevelPrediction		Outcome is 0 or 1
+2020-05-06 12:36:53	[Main thread]	TRACE	PatientLevelPrediction	similarPlpData	Returning population and plpData for new data using model settings
+2020-05-06 12:36:53	[Main thread]	INFO	PatientLevelPrediction	applyModel	Starting Prediction  2020-05-06 12:36:53 for  152666  people
+2020-05-06 12:36:59	[Main thread]	TRACE	PatientLevelPrediction	predict.plp	predict.plp - predictingProbabilities start
+2020-05-06 12:36:59	[Main thread]	TRACE	PatientLevelPrediction	predictProbabilities	predictProbabilities - predictFfdf start
+2020-05-06 12:37:02	[Main thread]	TRACE	PatientLevelPrediction	predictProbabilities	predictProbabilities - predictFfdf end
+2020-05-06 12:37:02	[Main thread]	INFO	PatientLevelPrediction	predictProbabilities	Prediction took 3.38 secs
+2020-05-06 12:37:02	[Main thread]	TRACE	PatientLevelPrediction	predict.plp	predict.plp - predictingProbabilities end
+2020-05-06 12:37:02	[Main thread]	INFO	PatientLevelPrediction	applyModel	Prediction completed at  2020-05-06 12:37:02  taking  -9.41294097900391
+2020-05-06 12:37:02	[Main thread]	INFO	PatientLevelPrediction	applyModel	Starting evaulation at  2020-05-06 12:37:02
+2020-05-06 12:37:02	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating AUC
+2020-05-06 12:37:05	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	AUC:                68.30
+2020-05-06 12:37:05	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	95% lower AUC:      65.35
+2020-05-06 12:37:05	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	95% upper AUC:      71.24
+2020-05-06 12:37:05	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating AUPRC
+2020-05-06 12:37:05	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	AUPRC:              0.62
+2020-05-06 12:37:05	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating Brier Score
+2020-05-06 12:37:06	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	Brier:              0.00
+2020-05-06 12:37:06	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calulating Threshold summary Started @ 2020-05-06 12:37:06
+2020-05-06 12:37:09	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Completed @ 2020-05-06 12:37:09
+2020-05-06 12:37:09	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calulating Demographic Based Evaluation Started @ 2020-05-06 12:37:09
+2020-05-06 12:37:11	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Completed @ 2020-05-06 12:37:11
+2020-05-06 12:37:11	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating Calibration Line
+2020-05-06 12:37:13	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	Calibration gradient: 1.14 intercept:         -0.00
+2020-05-06 12:37:13	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating Calibration Summary Started @ 2020-05-06 12:37:13
+2020-05-06 12:37:19	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Completed @ 2020-05-06 12:37:19
+2020-05-06 12:37:19	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating Quantiles Started @ 2020-05-06 12:37:19
+2020-05-06 12:37:21	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Completed @ 2020-05-06 12:37:21
+2020-05-06 12:37:21	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	Average Precision:  0.01
+2020-05-06 12:37:21	[Main thread]	INFO	PatientLevelPrediction	applyModel	Evaluation completed at  2020-05-06 12:37:21  taking  -27.8917877674103
+2020-05-06 12:37:21	[Main thread]	INFO	PatientLevelPrediction	applyModel	Starting covariate summary at  2020-05-06 12:37:21
+2020-05-06 12:37:26	[Main thread]	INFO	PatientLevelPrediction	applyModel	Covariate summary completed at  2020-05-06 12:37:26  taking  -4.62846302986145
+2020-05-06 12:37:26	[Main thread]	INFO	PatientLevelPrediction	evaluateMultiplePlp	Evaluation result save in ./test/results/finaltest/optumDod/Analysis_2/validationResult.rds
+2020-05-06 12:37:28	[Main thread]	INFO	oxfordKneeValidation	predictSimple	Extracting data for predicting tkrSimple
+2020-05-06 12:38:23	[Main thread]	INFO	oxfordKneeValidation	predictSimple	Creating population
+2020-05-06 12:38:23	[Main thread]	DEBUG	PatientLevelPrediction	createStudyPopulation	outcomeId: 8210
+2020-05-06 12:38:23	[Main thread]	DEBUG	PatientLevelPrediction	createStudyPopulation	binary: TRUE
+2020-05-06 12:38:23	[Main thread]	DEBUG	PatientLevelPrediction	createStudyPopulation	includeAllOutcomes: TRUE
+2020-05-06 12:38:23	[Main thread]	DEBUG	PatientLevelPrediction	createStudyPopulation	firstExposureOnly: FALSE
+2020-05-06 12:38:23	[Main thread]	DEBUG	PatientLevelPrediction	createStudyPopulation	washoutPeriod: 0
+2020-05-06 12:38:23	[Main thread]	DEBUG	PatientLevelPrediction	createStudyPopulation	removeSubjectsWithPriorOutcome: FALSE
+2020-05-06 12:38:23	[Main thread]	DEBUG	PatientLevelPrediction	createStudyPopulation	requireTimeAtRisk: FALSE
+2020-05-06 12:38:23	[Main thread]	DEBUG	PatientLevelPrediction	createStudyPopulation	minTimeAtRisk: 1
+2020-05-06 12:38:23	[Main thread]	DEBUG	PatientLevelPrediction	createStudyPopulation	riskWindowStart: 0
+2020-05-06 12:38:23	[Main thread]	DEBUG	PatientLevelPrediction	createStudyPopulation	startAnchor: FALSE
+2020-05-06 12:38:23	[Main thread]	DEBUG	PatientLevelPrediction	createStudyPopulation	riskWindowEnd: 90
+2020-05-06 12:38:23	[Main thread]	DEBUG	PatientLevelPrediction	createStudyPopulation	endAnchor: FALSE
+2020-05-06 12:38:23	[Main thread]	TRACE	PatientLevelPrediction	createStudyPopulation	Removing subjects with no time at risk (if any)
+2020-05-06 12:38:23	[Main thread]	INFO	PatientLevelPrediction	createStudyPopulation	Outcome is 0 or 1
+2020-05-06 12:38:26	[Main thread]	INFO	oxfordKneeValidation	predictSimple	Applying and evaluating model
+2020-05-06 12:38:26	[Main thread]	INFO	PatientLevelPrediction	applyModel	Starting Prediction  2020-05-06 12:38:26 for  152666  people
+2020-05-06 12:38:30	[Main thread]	INFO	PatientLevelPrediction	applyModel	Prediction completed at  2020-05-06 12:38:30  taking  -3.49502897262573
+2020-05-06 12:38:30	[Main thread]	INFO	PatientLevelPrediction	applyModel	Starting evaulation at  2020-05-06 12:38:30
+2020-05-06 12:38:30	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating AUC
+2020-05-06 12:38:33	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	AUC:                72.16
+2020-05-06 12:38:33	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	95% lower AUC:      69.37
+2020-05-06 12:38:33	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	95% upper AUC:      74.94
+2020-05-06 12:38:33	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating AUPRC
+2020-05-06 12:38:33	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	AUPRC:              0.79
+2020-05-06 12:38:33	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating Brier Score
+2020-05-06 12:38:33	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	Brier:              0.12
+2020-05-06 12:38:33	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calulating Threshold summary Started @ 2020-05-06 12:38:33
+2020-05-06 12:38:38	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Completed @ 2020-05-06 12:38:38
+2020-05-06 12:38:38	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calulating Demographic Based Evaluation Started @ 2020-05-06 12:38:38
+2020-05-06 12:38:41	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Completed @ 2020-05-06 12:38:41
+2020-05-06 12:38:41	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating Calibration Line
+2020-05-06 12:38:43	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	Calibration gradient: 0.15 intercept:         -0.05
+2020-05-06 12:38:43	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating Calibration Summary Started @ 2020-05-06 12:38:43
+2020-05-06 12:38:49	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Completed @ 2020-05-06 12:38:49
+2020-05-06 12:38:49	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Calculating Quantiles Started @ 2020-05-06 12:38:49
+2020-05-06 12:38:51	[Main thread]	TRACE	PatientLevelPrediction	evaluatePlp	Completed @ 2020-05-06 12:38:51
+2020-05-06 12:38:51	[Main thread]	INFO	PatientLevelPrediction	evaluatePlp	Average Precision:  0.01
+2020-05-06 12:38:51	[Main thread]	INFO	PatientLevelPrediction	applyModel	Evaluation completed at  2020-05-06 12:38:51  taking  -25.3794140815735
+2020-05-06 12:38:51	[Main thread]	INFO	PatientLevelPrediction	applyModel	Starting covariate summary at  2020-05-06 12:38:51
+2020-05-06 12:38:55	[Main thread]	INFO	PatientLevelPrediction	applyModel	Covariate summary completed at  2020-05-06 12:38:55  taking  -3.14222598075867
+2020-05-06 12:38:58	[Main thread]	INFO	oxfordKneeValidation	execute	Saving results
+2020-05-06 12:39:02	[Main thread]	INFO	oxfordKneeValidation	execute	Results saved to:./test/results/finaltest/optumDod/Analysis_1001/validationResults.rds
+2020-05-06 12:39:03	[Main thread]	INFO	oxfordKneeValidation	execute	Packaging results
