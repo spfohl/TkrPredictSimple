@@ -53,6 +53,7 @@ packageResults <- function(outputFolder,
     # loads analysis results
     if(file.exists(file.path(outputFolder,folder, 'validationResult.rds'))){
       plpResult <- readRDS(file.path(outputFolder,folder, 'validationResult.rds'))
+      plpResult$model$predict <- NULL
 
       if(minCellCount==0){
         minCellCount <- NULL
