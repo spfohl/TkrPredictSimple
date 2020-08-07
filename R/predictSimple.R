@@ -1,31 +1,31 @@
 predictSimple <- function(connectionDetails,
-                          cohortId,
-                          outcomeIds,
-                          cdmDatabaseSchema,
-                          cdmDatabaseName,
-                          cohortDatabaseSchema,
-                          cohortTable,
-                          oracleTempSchema,
-                          standardCovariates,
-                          endDay,
-                          firstExposureOnly,
-                          sampleSize,
-                          cdmVersion,
-                          riskWindowStart,
-                          startAnchor,
-                          riskWindowEnd,
-                          endAnchor,
-                          removeSubjectsWithPriorOutcome,
-                          priorOutcomeLookback,
-                          requireTimeAtRisk,
-                          minTimeAtRisk,
-                          includeAllOutcomes,
-                          model = 'tkrSimple.csv',
-                          analysisId = 1001,
+                                           cohortId,
+                                           outcomeIds,
+                                           cdmDatabaseSchema,
+                                           cdmDatabaseName,
+                                           cohortDatabaseSchema,
+                                           cohortTable,
+                                           oracleTempSchema,
+                                           standardCovariates,
+                                           endDay,
+                                           firstExposureOnly,
+                                           sampleSize,
+                                           cdmVersion,
+                                           riskWindowStart,
+                                           startAnchor,
+                                           riskWindowEnd,
+                                           endAnchor,
+                                           removeSubjectsWithPriorOutcome,
+                                           priorOutcomeLookback,
+                                           requireTimeAtRisk,
+                                           minTimeAtRisk,
+                                           includeAllOutcomes,
+                                           model = 'TkrSimple.csv',
+                                           analysisId = 1,
                           studyStartDate = "",
                           studyEndDate = ""
-){
-  ParallelLogger::logInfo("Extracting data for predicting tkrSimple")
+                          ){
+  ParallelLogger::logInfo("Extracting data for predicting simple model")
   plpData <- getData(connectionDetails = connectionDetails,
                      cohortId = cohortId,
                      outcomeIds = outcomeIds,
@@ -57,6 +57,10 @@ predictSimple <- function(connectionDetails,
                                                               requireTimeAtRisk = requireTimeAtRisk,
                                                               minTimeAtRisk = minTimeAtRisk,
                                                               includeAllOutcomes = includeAllOutcomes)
+               ParallelLogger::logTrace('Done pop.')
+
+  if(is.null(population)){return(NULL)}
+
 
 
   # apply the model:
@@ -92,5 +96,7 @@ predictSimple <- function(connectionDetails,
   result$covariateSummary <- merge(result$covariateSummary, result$model$model[,c('covariateId', 'points')], by ='covariateId')
   result$covariateSummary$covariateValue = result$covariateSummary$points
 
-  return(result)
-}
+ return(result)
+  }
+
+

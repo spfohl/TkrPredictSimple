@@ -1,6 +1,6 @@
-# Copyright 2018 Observational Health Data Sciences and Informatics
+# Copyright 2020 Observational Health Data Sciences and Informatics
 #
-# This file is part of PredictionNetworkStudySkeleton
+# This file is part of oxfordKneeValidation
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,30 +19,25 @@
 #' @details
 #' This function packages the results.
 #'
-#' @param outputFolder        Name of local folder to place results; make sure to use forward slashes
+#' @param outputFolder        Name of folder containing the study analysis results
 #'                            (/)
 #' @param minCellCount        The minimum number of subjects contributing to a count before it can be included in the results.
 #'
 #' @export
 packageResults <- function(outputFolder,
+                           cdmDatabaseName,
                            minCellCount = 5) {
   if(missing(outputFolder)){
     stop('Missing outputFolder...')
   }
 
   # for each analysis copy the requested files...
-  folders <- list.dirs(path = outputFolder, recursive = T, full.names = F)
+  folders <- list.dirs(path = file.path(outputFolder,cdmDatabaseName), recursive = F, full.names = F)
   folders <- folders[grep('Analysis_', folders)]
-  if(length(grep('inst/plp_models', folders))>0){
-    folders <- folders[-grep('inst/plp_models', folders)] #in case using package directory
-  }
-  
-  if(length(folders)==0){
-    stop('No results to export...')
-    }
 
   #create export subfolder in workFolder
-  exportFolder <- file.path(outputFolder, "export")
+  exportFolder <- file.path(outputFolder,cdmDatabaseName, "export")
+  dir.create(exportFolder, recursive = T)
 
   for(folder in folders){
     #copy all plots across
@@ -51,29 +46,39 @@ packageResults <- function(outputFolder,
     }
 
     # loads analysis results
-    if(file.exists(file.path(outputFolder,folder, 'validationResult.rds'))){
-      plpResult <- readRDS(file.path(outputFolder,folder, 'validationResult.rds'))
+    if(file.exists(file.path(outputFolder,cdmDatabaseName,folder, 'validationResults.rds'))){
+      plpResult <- readRDS(file.path(outputFolder,cdmDatabaseName,folder, 'validationResults.rds'))
       plpResult$model$predict <- NULL
-
-      if(minCellCount==0){
-        minCellCount <- NULL
+      if(minCellCount!=0){
+        plpResult <- PatientLevelPrediction::transportPlp(plpResult,
+                                             save = F,
+                                             n=minCellCount,
+                                             includeEvaluationStatistics=T,
+                                             includeThresholdSummary=T,
+                                             includeDemographicSummary=T,
+                                             includeCalibrationSummary =T,
+                                             includePredictionDistribution=T,
+                                             includeCovariateSummary=T)
+      } else {
+        plpResult <- PatientLevelPrediction::transportPlp(plpResult,
+                                                          save = F,
+                                             n=NULL,
+                                             includeEvaluationStatistics=T,
+                                             includeThresholdSummary=T,
+                                             includeDemographicSummary=T,
+                                             includeCalibrationSummary =T,
+                                             includePredictionDistribution=T,
+                                             includeCovariateSummary=T)
       }
-      result <- PatientLevelPrediction::transportPlp(plpResult, save = F,
-                                                     n=minCellCount,
-                                                     includeEvaluationStatistics=T,
-                                                     includeThresholdSummary=T,
-                                                     includeDemographicSummary=T,
-                                                     includeCalibrationSummary =T,
-                                                     includePredictionDistribution=T,
-                                                     includeCovariateSummary=T)
-      saveRDS(result, file.path(exportFolder,folder, 'validationResult.rds'))
+
+      saveRDS(plpResult, file.path(exportFolder,folder, 'validationResults.rds'))
 
     }
   }
 
 
   ### Add all to zip file ###
-  zipName <- paste0(outputFolder, '.zip')
+  zipName <- file.path(outputFolder,paste0(cdmDatabaseName, '.zip'))
   OhdsiSharing::compressFolder(exportFolder, zipName)
   # delete temp folder
   unlink(exportFolder, recursive = T)
